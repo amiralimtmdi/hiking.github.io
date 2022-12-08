@@ -1,0 +1,918 @@
+/*
+Developer: AMIRALI MPTAMEDI
+Number: 09199577254
+Email: amirmotamedi2006@gmail.com
+Tel: @amiralimtmdi
+Github: https://github.com/amiralimtmdi
+*/
+
+/* ================== FONTS ================== */
+  @font-face {
+    font-family:'bangers';
+    src: url("../fonts/Bangers-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: 'sans';
+    src: url("../fonts/OpenSans-Medium.ttf");
+  }
+
+/* ================== Start normalize css ================== */
+
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0 ;
+    background-color:#000000 ;
+    overflow-x: hidden;
+    color: white;
+  }
+
+  ::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: #f1c50e;
+  }
+  main {
+    display: block;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+
+  a {
+    background-color: transparent;
+  }
+  
+  abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+  
+  b,strong {
+    font-weight: bolder;
+  }
+  
+  code,kbd,samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  small {
+    font-size: 80%;
+  }
+
+  sub,sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+
+  
+  img {
+    border-style: none;
+  }
+
+  button,input,optgroup,select,textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }
+
+  button,input { /* 1 */
+    overflow: visible;
+  }
+
+  button,select { /* 1 */
+    text-transform: none;
+  }
+  
+
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+  
+  legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+
+  progress {
+    vertical-align: baseline;
+  }
+
+  textarea {
+    overflow: auto;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+
+  details {
+    display: block;
+  }
+
+  summary {
+    display: list-item;
+  }
+
+  template {
+    display: none;
+  }
+
+  [hidden] {
+    display: none;
+  }
+/* ================== End normalize css ================== */
+
+/* ***contaner *** */
+  .container {
+    width: 92.7% ;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .title {
+    letter-spacing: 3px;
+    font-weight: lighter;
+    font-size: 47px;
+    margin-bottom: 21px;
+    font-family: 'bangers';
+  }
+
+/* ================== Start header ================== */
+  .header {
+    width: 100%;
+    background-image: url("../images/landing-BG_auto_x2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 720px;
+    margin-bottom: 57px;
+  }
+
+  /* side nav */
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .sidenav a {
+    padding: 8px 8px 38px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: 'sans';
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  /* header content */
+  .header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 200px;
+  }
+  .header__title--text {
+    font-family: 'bangers';
+    letter-spacing: 6px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    font-size: 66px;
+  }
+  .header__title--icons {
+    width: 47%;
+    display: flex;
+    font-size: 28px;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    margin-top: 5px;
+  }
+  .header__title--icons a {
+    color: white;
+  }
+  .header__title--button {
+    background-color: #dbbe00;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'sans';
+    padding: 13px 35px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s all;
+  }
+  .header__title--button:hover {
+    background-color: #d3a900;
+  }
+/* ================== End header ================== */
+
+/* ================== Start main ================== */
+  .main {
+    margin: 0;
+    padding: 0;
+    
+  }
+
+/* section About Us */
+  .about-us {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+  height: 435px;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  }
+  .about-us__text-box {
+    height: 100%;
+    width: 30%;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about-us__text-box--text {
+    line-height: 32px;
+    width: 333px;
+    font-size: 18px;
+    width: 100%;
+    font-family: 'sans';
+    margin-top: 0;
+  }
+  .about-us__text-box--button {
+    background-color:#f9e24e;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'sans';
+    padding: 12px 34px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s all;
+    width: 150px;
+    margin-top: 30px;
+  }
+  .about-us__img-box-1 {
+    width: 30%;
+    height: 100%;
+  }
+  .about-us__img-1 {
+    width: 100%;
+    height: 100%;
+  }
+  .about-us__img-box-2 {
+    width: 30%;
+    height: 100%; 
+  }
+  .about-us__img-2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* section gallery */
+  .gallery {
+    display: grid;
+    width: 100%;
+    grid-template-columns:repeat(3 , 1fr);
+    grid-template-rows: repeat(9, 80px);
+    gap: 20px;
+    margin-bottom: 45px;
+
+  }
+  .gallery_item-1 {
+    background-image: url('../images/img-gal--2.jpg');
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    justify-content: end;
+    grid-column: 1 / 2;
+    grid-row: 1 / 6;
+  }
+  .gallery_item-2 {
+    grid-column: 2/ 3;
+    grid-row: 1 / 5;
+  }
+  .gallery_item-3 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 6;
+  }
+  .gallery_item-4 {
+    grid-column: 1/ 2;
+    grid-row: 6 / 10;
+  }
+  .gallery_item-5 {
+    grid-column: 2/ 3;
+    grid-row: 5 / 8;
+  }
+  .gallery_item-6 {
+    grid-column: 2/ 3;
+    grid-row: 8 / 10;
+  }
+  .gallery_item-7 {
+    background-image: url('../images/img-gal--1.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    justify-content: end;
+    grid-column: 3/ 4;
+    grid-row: 6 / 10;
+  }
+  .gallery img {
+    width: 100%;
+    height: 100%;
+  }
+  .gallery h3 {
+    font-family: 'bangers';
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+  }
+  .gallery p {
+    font-family: 'sans';
+    font-size: 14px;
+    margin-top: 0;
+    font-style: italic;
+  }
+  
+  /* section  hiking*/
+  .hiking {
+    margin: 56px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: space-between;
+  }
+  .hiking p {
+    font-size: 14px;
+    font-family: 'sans';
+    font-style: italic;
+    line-height: 22px;
+    margin: 0;
+  }
+  .hiking button {
+    background-color:#f9e24e;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'sans';
+    padding: 12px 34px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s all;
+    width: 150px;
+    margin-top: 30px;
+  }
+  .hiking img {
+    width: 100%;
+    height: 100%;
+  }
+  .hiking_title-box {
+    width: 64%;
+  }
+  .hiking_img-boxs {
+    display: flex;
+    gap: 30px;
+  }
+  .hiking_img-box {
+    width: 100%;
+  }
+  .hiking_img {
+    width: 100%;
+    height: 68%;
+    margin-bottom: 36px;
+  }
+
+  /* section number*/
+  .numbers {
+    width: 100%;
+    height: 471px;
+    background-image: url('../images/footer.jpeg');
+    background-size: cover;background-position: center;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+  }
+  .filter-background {
+    width: 100%;
+    height: 100%;
+    backdrop-filter:brightness(0.45);
+  }
+  .flexing-number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .numbers_title-box {
+    margin-bottom: 30px;
+  }
+  .numbers_title-box--text {
+    width: 575px;
+  }
+  .numbers_title-box--text , p{
+    margin-top: 0;
+    font-size: 14px;
+    font-family: 'sans';
+    font-style: italic;
+    line-height: 22px;
+  }
+  .numbers_number-box {
+    display: flex;
+    gap: 0;
+    justify-content: center;
+  }
+  .numbers_number-box--num {
+    width: 25%;
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 107px;
+    font-family: 'bangers';
+  }
+
+  /* Norwegian section */
+  .Norwegian {
+    width: 100%;
+    height: 527px;
+    margin-bottom: 50px;
+    background-image: url('../images/backgrond-sec--1.jpeg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid white;
+  }
+  .felxing-norwegian {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    
+  }
+  .Norwegian_left-box {
+    width: 50%;
+  }
+  .Norwegian_left-box h2 {
+    width: 488px;
+  }
+  .Norwegian_right-box {
+    width: 50%;
+  
+  }
+  .Norwegian_right-box--list-item {
+    margin: 7px 0;
+    font-size: 14px;
+    font-family: 'sans';
+  }
+  .Norwegian button {
+    background-color: #f9e24e;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'sans';
+    padding: 12px 34px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s all;
+    width: 150px;
+    margin-top: 30px;
+  }
+
+  /* section persons */
+  .persons {
+    width: 100%;
+    border-bottom: 2px solid white;
+  }
+  .persons img {
+    width: 100%;
+    height: 100%;
+  }
+  .persons h3 {
+    font-size: 28px;
+  }
+  .griding-persons {
+    display: grid;
+    grid-template-columns: 33%  33% 33%;
+    grid-template-rows: 190px 190px;
+    justify-items: center;
+
+  }
+  .persons_img-1 {
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    grid-column: 1 / 2;
+    overflow: hidden;
+  }
+  .persons_text-box--1 {
+    grid-column: 2 / 4;
+  }
+  .persons_text-box--2 {
+    grid-column: 1 / 3;
+  }
+  .persons_img-2 {
+    width: 140px;
+    height: 140px;
+    float: right;
+    overflow: hidden;
+    grid-column: 3 / 4;
+    border-radius: 100%;
+  }
+/* ================ End main ==================  */
+
+/* ================== Start footeer ================== */
+  .footer {
+    margin-bottom: 60px;
+  }
+  .footer img {
+    width: 100%;
+    height: 100%;
+  }
+  .footer_img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 267px;
+  }
+  .flexing-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer_contact--logo {
+    width: 150px;
+    height: 140px;
+  }
+  .footer_contact--sub h3 {
+    margin-top: 0;
+    font-size: 36px;
+  }
+  .footer_contact--sub p {
+    font-size: 14px;
+    width: 456px;
+  }
+  .footer_contact--sub button {
+    background-color: #f9e24e;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'sans';
+    padding: 10px 29px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s all;
+    width: 135px;
+  }
+/* ================== End footer ================== */
+
+/* ================== Start beack-points ================== */
+@media only screen and (max-width:980px){
+  /* section header */
+  .header__title--text {
+    font-size: 53px;
+  }
+  .header__title--button {
+    font-size: 14px;
+  }
+  .header img {
+    width: 232px;
+    height: 202px;
+  }
+
+  /* section gallery */
+  .gallery {
+    grid-template-columns:repeat(2 , 50%);
+    grid-template-rows: repeat(17, 80px);
+    grid-auto-rows: 300px;
+    grid-auto-columns: 100%;
+  }
+  .gallery_item-3 {
+    grid-column: 1 / 3;
+    grid-row:10 / 14 ;
+  }
+  .gallery_item-7 {
+    background-image: url('../images/img-gal--1.jpeg');
+    background-size: 100% 100%;
+    grid-column: 1/ 3;
+    grid-row: 14 / 18;
+  }
+}
+
+@media only screen and (max-width:790px){
+  .container {
+      max-width: 590px;
+      overflow: hidden;
+  }
+   /* section header */
+   .header__title--text {
+    font-size: 42px;
+  }
+  .header__title--icons {
+    font-size: 28px;
+  }
+  .header__title--button {
+    font-size: 13px;
+  }
+
+  /* section about us */
+  .about-us {
+    gap: 14px;
+    height: 331px;
+  }
+  .about-us__text-box {
+    padding: 0;
+}
+  .about-us__text-box--text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .about-us .title {
+    font-size: 38px;
+    margin-bottom: 9px;
+  }
+
+  /* section hiking */
+  .hiking_img-boxs {
+    margin-bottom: 100px;
+  }
+  .hiking_title-box {
+    width: 78%;
+  }
+
+  /* section number */
+  .numbers {
+    height: 747px;
+  }
+  .numbers_number-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+  }
+  .numbers_title-box--text {
+    width: auto;
+  }
+
+  /* section nowegian */
+  .Norwegian_left-box h2 {
+    width: 100%;
+    font-size: 38px;
+  }
+
+  /* section footer */
+  .flexing-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer_contact--sub h3 {
+    margin-top: 24px;
+  }
+  .footer_contact--sub p {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width:590px){
+  .container {
+        max-width: 470px;
+        width: 81%;
+        overflow: hidden;
+  }
+  /* header */
+  .header__content {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    
+  }
+  .header__title--icons {
+    font-size: 24px;
+    width: 53%;
+  }
+  .header img {
+    width: 182px;
+    height: 159px;
+  }
+
+  /* section about */
+  .about-us {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    width: 100%;
+    padding: 0 7px;
+  }
+  .about-us__text-box {
+    width: auto;
+  }
+  .about-us__img-box-1,
+  .about-us__img-box-2 {
+      width: 100%;
+      height: 287px;
+  }
+  .about-us__img-box-1 img,
+  .about-us__img-box-2 img {
+    display: none;
+  }
+  .about-us__img-box-1{
+    background-image: url('../images/img-about-mobile.png');
+    background-size: cover;
+  }
+  .about-us__img-box-2{
+    background-image: url('../images/img-about--2-mobile.png');
+    background-size: cover;
+  }
+  .about-us__text-box {
+    margin-bottom: 53px;
+  }
+
+  /* section gallery */
+  .gallery {
+    grid-template-columns: repeat(1 , 100%);
+    grid-template-rows: repeat(7 , 400px);
+  }
+  .gallery-item {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+/* section hiking */
+  .hiking_img-boxs {
+    margin-bottom: 0;
+  }
+  .hiking_img-boxs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* section numbers */
+  .numbers {
+    height: 1369px;
+  }
+  .numbers_number-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  .numbers_number-box--num {
+    width: 100%;
+  }
+
+  /* section norweginam */
+  .Norwegian {
+    height: 817px;
+  }
+  .felxing-norwegian {
+    display: flex;
+    height: 100%;
+    align-items:unset ;
+    flex-direction: column;
+  }
+  .Norwegian_left-box {
+    width: auto;
+  }
+  .Norwegian_right-box {
+    width: auto;
+    margin-top: 40px;
+  }
+  .Norwegian_right-box--list {
+    padding: 0 0 0 15px;
+  }
+
+  /* section persons */
+  .persons {
+    padding-bottom: 100px;
+  }
+  .griding-persons {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 240px 250px 263px 161px;
+    justify-items: center;
+    align-items: center;
+  }
+  .persons_img-1 {
+    grid-column: 2 / 3;
+  }
+  .persons_text-box--1 {
+    grid-column: 1 / 4;
+  }
+  .persons_text-box--2 {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+  }
+  .persons_img-2 {
+    grid-column: 2 / 3;
+    grid-row: 4 /5;
+  }
+}
+
+@media only screen and (max-width:481px){
+  .container {
+      max-width: 350px;
+   }
+
+   /* section about */
+  .about-us__img-box-1{
+    background-image: url('../images/img-about.png');
+    background-size: cover;
+    background-position: center;
+
+  }
+  .about-us__img-box-2{
+    background-image: url('../images/img-about--2.png');
+    background-size: cover;
+    background-position: center;
+    
+  }
+
+  /* section hiking */
+  .hiking_title-box {
+    width: auto;
+  }
+
+}
+/* ================== End brack-points ================== */
