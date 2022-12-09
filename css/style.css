@@ -320,7 +320,7 @@ html {
     margin-top: 0;
   }
   .about-us__text-box--button {
-    background-color:#f9e24e;
+    background-color:#dbbe00;
     text-transform: uppercase;
     color: white;
     font-family: 'sans';
@@ -434,7 +434,7 @@ html {
     margin: 0;
   }
   .hiking button {
-    background-color:#f9e24e;
+    background-color:#dbbe00;
     text-transform: uppercase;
     color: white;
     font-family: 'sans';
@@ -547,7 +547,7 @@ html {
     font-family: 'sans';
   }
   .Norwegian button {
-    background-color: #f9e24e;
+    background-color: #dbbe00;
     text-transform: uppercase;
     color: #fff;
     font-family: 'sans';
@@ -632,7 +632,7 @@ html {
     width: 456px;
   }
   .footer_contact--sub button {
-    background-color: #f9e24e;
+    background-color: #dbbe00;
     text-transform: uppercase;
     color: #fff;
     font-family: 'sans';
