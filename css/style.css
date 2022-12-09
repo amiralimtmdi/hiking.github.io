@@ -894,13 +894,19 @@ html {
   .container {
       max-width: 350px;
    }
+  .header {
+    height: 670px;
+  }
+  .header__content {
+    padding-top: 170px;
+  }
 
    /* section about */
   .about-us__img-box-1{
     background-image: url('../images/img-about.png');
     background-size: cover;
     background-position: center;
-
+    margin-bottom: 12px;
   }
   .about-us__img-box-2{
     background-image: url('../images/img-about--2.png');
@@ -912,7 +918,13 @@ html {
   /* section hiking */
   .hiking_title-box {
     width: auto;
+    margin:0 0 17px 0;
   }
-
+  .hiking_img-box {
+    margin-bottom: 30px;
+  }
+  .hiking_img {
+    margin-bottom: 15px;
+  }
 }
 /* ================== End brack-points ================== */
